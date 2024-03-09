@@ -1,0 +1,109 @@
+
+/*tags*/
+body {
+    background-color: pink;
+    font-size: 2rem;
+    color: white;
+    font-family: sans-serif;
+}
+
+/*classes*/
+.container{
+    height: 92vh;
+    display: flex;
+    flex-flow: wrap;
+    gap: 1.5rem;
+    margin: 1.5rem;
+}
+
+/*combining classes*/
+.header, .footer{
+    height: 70px;
+    flex-basis: 100%;
+    background-color: green;
+    text-align: center;
+}
+
+.header-text, .footer-text{
+    margin: 20px;
+}
+/**/
+
+.aside {
+    flex-basis: 25%;
+    height: 73%;
+    background-color: darkslategrey;
+    text-align: center;
+    flex-shrink: 2;
+}
+
+.aside-text{
+    position: relative;
+    top: 35%;
+}
+
+.article {
+    background-color: red;
+    padding-bottom: 20px;
+    flex: 1;  
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-end; 
+    gap: 1rem;
+}
+
+.article-text{
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.image {
+    height: 12rem;
+    width: 12rem;
+    text-align: center;
+    align-content: center;
+    background-color: grey;
+    flex-shrink: 3;
+}
+
+.image-text {
+    position: relative;
+    top: 20%;
+}
+
+/*media queries*/
+/*shrinking to 768px*/
+@media only screen and (min-width: 451px) and (max-width: 768px) {
+    .aside{
+        flex-basis: 100%;
+        flex-shrink: 0;
+        height: 40%;
+    }
+
+    .article{
+        padding: 20px;
+    }  
+}
+
+/*shrinking to 450px*/
+
+@media only screen and (max-width: 450px) {
+
+    .article, .image, .aside{
+        flex-basis: 100%;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+
+    .image {
+        margin: 10px 10px;
+    }
+
+    .article{
+        padding: 20px;
+    }  
+
+}
+
+
